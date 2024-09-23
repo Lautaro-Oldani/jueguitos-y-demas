@@ -16,8 +16,8 @@ public class Recordatorio {
     }
 
     public Fecha fecha() {
-        Fecha fecha2 = new Fecha(this.fecha);
-        return fecha2;
+        Fecha nuevaFecha = new Fecha(this.fecha);
+        return nuevaFecha;
     }
 
     public String mensaje() {
@@ -44,7 +44,7 @@ public class Recordatorio {
         }
         Recordatorio otroRecordatorio = (Recordatorio) otro;
         
-        if (otroRecordatorio.mensaje == this.mensaje && otroRecordatorio.fecha == this.fecha && otroRecordatorio.horario == this.horario){
+        if (otroRecordatorio.mensaje == this.mensaje && otroRecordatorio.fecha.equals(this.fecha) && otroRecordatorio.horario.equals(this.horario)){
             return true;
         } else {
             return false;
